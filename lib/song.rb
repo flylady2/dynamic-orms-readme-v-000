@@ -52,7 +52,7 @@ class Song
     end
     #binding.pry
     values.join(", ")
-    binding.pry
+    #binding.pry
   end
 
   def col_names_for_insert
