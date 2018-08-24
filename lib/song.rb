@@ -19,7 +19,7 @@ class Song
     table_info.each do |row|
       column_names << row["name"]
     end
-    binding.pry
+    #binding.pry
     column_names.compact
   end
 
@@ -28,6 +28,7 @@ class Song
   end
 
   def initialize(options={})
+    binding.pry
     options.each do |property, value|
       self.send("#{property}=", value)
     end
