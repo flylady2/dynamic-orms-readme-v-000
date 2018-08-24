@@ -30,7 +30,7 @@ class Song
   def initialize(options={})
     #binding.pry
     options.each do |property, value|
-      binding.pry
+      #binding.pry
       self.send("#{property}=", value)
     end
   end
@@ -50,6 +50,7 @@ class Song
     self.class.column_names.each do |col_name|
       values << "'#{send(col_name)}'" unless send(col_name).nil?
     end
+    binding.pry
     values.join(", ")
   end
 
